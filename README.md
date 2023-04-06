@@ -4,6 +4,37 @@ A simple backend for food blog. Database contains several tables with foreign ke
 1. User can input new recipes with ingredients and instructions via command line. User input is saved to a several tables in a database, that are connected via foreign keys.  
 2. User can provide ingredients available to him via command line and the program will propose most suitable recipes from the database.
 
+Example of functionality 1 in command line:
+
+> python3 main.py food_blog.db
+Pass the empty recipe name to exit.
+Recipe name: > Milkshake
+Recipe description: > Blend all ingredients and put in the fridge.
+1) breakfast  2) brunch  3) lunch  4) supper
+Enter proposed meals separated by a space: > 1 3 4
+Input quantity of ingredient <press enter to stop>: > 500 ml milk
+Input quantity of ingredient <press enter to stop>: > 1 cup strawberry
+Input quantity of ingredient <press enter to stop>: > 1 tbsp sugar
+Input quantity of ingredient <press enter to stop>: >
+Pass the empty recipe name to exit.
+Recipe name: > Hot cacao
+Recipe description: > Pour the ingredients into the hot milk. Mix it up.
+1) breakfast  2) brunch  3) lunch  4) supper
+Enter proposed meals separated by a space: > 1 2
+Input quantity of ingredient <press enter to stop>: > 250 ml milk
+Input quantity of ingredient <press enter to stop>: > 2 tbsp cacao
+Input quantity of ingredient <press enter to stop>: >
+Pass the empty recipe name to exit.
+
+Examples of functionality 2 in command line:
+
+> python3 main.py food_blog.db --ingredients="sugar,milk" --meals="breakfast,brunch"
+Recipes selected for you: Hot cacao, Milkshake
+
+> python3 main.py food_blog.db --ingredients="sugar,milk,strawberry" --meals="brunch"
+There are no such recipes in the database.
+
+
 Objectives:
 1. Create a database. Pass the name of the database to the script as an argument.
 2. Create a table named meals with two columns: meal_id of an integer type with the primary key attribute, and meal_name of a text type and with the unique and not null attribute.
