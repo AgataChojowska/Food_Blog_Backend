@@ -1,5 +1,4 @@
 import pytest
-import sqlite3
 from unittest.mock import Mock
 from food_blog.blog import UserInputCollector, \
     UserInputChecker, QuantityTableData, RecipesDBStore, OptionalArguments, Recipe, Serve
