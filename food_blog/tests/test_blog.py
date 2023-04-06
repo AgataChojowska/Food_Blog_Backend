@@ -1,10 +1,10 @@
 import pytest
 import sqlite3
 from unittest.mock import Mock
-from blog import UserInputCollector, \
+from food_blog.blog import UserInputCollector, \
     UserInputChecker, QuantityTableData, RecipesDBStore, OptionalArguments, Recipe, Serve
-from db_handler import DBConnection, Data
-from custom_errors import MealNumberError, QuantityError, \
+from food_blog.db_handler import DBConnection, Data
+from food_blog.custom_errors import MealNumberError, QuantityError, \
     MeasureError, IngredientError, UserIngredientError, UserMealError, NoIngredientsError, NoMealsError
 
 

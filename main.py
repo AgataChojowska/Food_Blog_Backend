@@ -1,8 +1,8 @@
 import argparse
-from db_handler import Data
-from blog import DBConnection, UserInputCollector, \
+from food_blog.db_handler import Data
+from food_blog.blog import DBConnection, UserInputCollector, \
     UserInputChecker, QuantityTableData, RecipesDBStore, OptionalArguments
-from custom_errors import MealNumberError, QuantityError, UserIngredientError, UserMealError, NoIngredientsError, \
+from food_blog.custom_errors import MealNumberError, QuantityError, UserIngredientError, UserMealError, NoIngredientsError, \
     NoMealsError
 
 if __name__ == '__main__':
