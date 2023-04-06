@@ -1,6 +1,6 @@
 import pytest
 import sqlite3
-from food_blog.db_handler import DBConnection, Data
+from db_handler import DBConnection, Data
 
 
 def test_turn_on_foreign_keys():
